@@ -1,0 +1,41 @@
+theme = "solarized_dark"
+
+[editor]
+cursorline = true
+completion-replace = true
+bufferline = "always"
+color-modes = true
+popup-border = "all"
+
+[editor.statusline]
+left = ["mode", "spinner", "file-modification-indicator", "version-control"]
+center = ["file-name"]
+right = ["diagnostics", "selections", "position", "file-encoding", "file-type"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.lsp]
+display-messages = true
+display-inlay-hints = true
+
+[editor.cursor-shape]
+normal = "bar"
+insert = "bar"
+select = "bar"
+
+[editor.auto-save]
+after-delay.enable = true
+after-delay.timeout = 1000
+
+[editor.indent-guides]
+render = true
+
+[keys.normal]
+C-e = ":sh zellij run -c -f -x 10% -y 10% --width 75% --height 75% -- bash ~/.config/helix/yazi-picker.sh open"
+
+[keys.insert]
+"A-x" = "normal_mode"
+j = { k = "normal_mode" }
+

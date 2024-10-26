@@ -1,0 +1,22 @@
+[manager]
+show_hidden = true
+
+[opener]
+edit = [
+	{ run = 'helix "$@"', block = true, for = "unix" },
+]
+
+[[plugin.prepend_fetchers]]
+id   = "git"
+name = "*"
+run  = "git"
+
+[[plugin.prepend_fetchers]]
+id   = "git"
+name = "*/"
+run  = "git"
+
+[plugin]
+prepend_previewers = [
+  { name = "*.md", run = "glow" },
+]
